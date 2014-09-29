@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: mv-demo_development
+  host: localhost
+  pool: 10
+  username: mv-demo
+  password: 65skyamll7
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: mv-demo_test
+  host: localhost
+  pool: 10
+  username: mv-demo
+  password: 65skyamll7
