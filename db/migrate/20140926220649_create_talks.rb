@@ -4,8 +4,7 @@ class CreateTalks < ActiveRecord::Migration
       t.string :name
       t.integer :author_id
       t.integer :club_id
-      t.text :descrition
-
+      t.text :description
       t.timestamps
     end
   end

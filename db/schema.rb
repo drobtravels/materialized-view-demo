@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20140926220758) do
     t.string   "name"
     t.integer  "city_id"
     t.integer  "technology_id"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -49,7 +50,7 @@ ActiveRecord::Schema.define(version: 20140926220758) do
     t.string   "name"
     t.integer  "author_id"
     t.integer  "club_id"
-    t.text     "descrition"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -4,7 +4,7 @@ class CreateClubs < ActiveRecord::Migration
       t.string :name
       t.integer :city_id
       t.integer :technology_id
-
+      t.text :description
       t.timestamps
     end
   end
