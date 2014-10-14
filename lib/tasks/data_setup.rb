@@ -16,9 +16,22 @@ def valid_comment
   Faker::Lorem.sentence.truncate(255)
 end
 
+def generate_comment
+  (2 == rand(4)) ? invalid_comment : valid_comment
+end
+
 Talk.all.each do |talk|
   200.times do
-    comment = (2 == rand(4)) ? invalid_comment : valid_comment
+    comment = generate_comment
     Feedback.create(score: rand(5), comment: comment)
+  end
+end
+
+
+city = City.find_by(name: 'Philadelphia')
+city.clubs.each do |club|
+  1_000.times do
+    talk = club.talks.offset(rand(club.talks.count)).first
+    talk.feedbacks.create(score: rand(5), comment: generate_comment)
   end
 end
