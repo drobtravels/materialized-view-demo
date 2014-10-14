@@ -1,4 +1,6 @@
-100.times { Author.create(name: Faker::Name.name) }
+50_0000.times { Author.create(name: Faker::Name.name) }
+
+50_000.times { City.create(name: Faker::Address.city, state_abbr: Faker::Address.state_abbr) }
 
 Club.all.each do |club|
   200.times do
